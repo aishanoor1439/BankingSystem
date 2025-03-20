@@ -1,16 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.mycompany.mavenproject27;
 
-/**
- *
- * @author ABC
- */
 public class Mavenproject27 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        SavingsAccount savings = new SavingsAccount("SA123", 1000, 5);
+        CheckingAccount checking = new CheckingAccount("CA456", 500, 200);
+
+        savings.deposit(500);
+        savings.applyInterest();
+        savings.displayAccountInfo();
+
+        checking.withdraw(600);
+        checking.withdraw(200);
+        checking.displayAccountInfo();
     }
 }
